@@ -76,3 +76,4 @@ function getStrokeColor() {
 
 function getFont() {
 	return ctx.font;
+}
