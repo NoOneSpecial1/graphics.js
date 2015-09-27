@@ -41,9 +41,12 @@ function fillOval(x, y, radius) {
 	ctx.fill();
 }
 
-function drawImage(img, x, y) {
-	var image = document.getElementById(img);
-	ctx.drawImage(image, x, y);
+function drawImage(imgSrc, x, y) {
+	var img = new Image();
+	img.src = imgSrc;
+	img.onload = function() {
+		ctx.drawImage(img, x, y);
+	}
 }
 
 function drawImage(img, x, y, width, height) {
